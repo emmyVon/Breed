@@ -1,0 +1,27 @@
+.home{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)),url('../../Assets/IMAGES/fig\ 3.jpg');
+    width: 100vw;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: cover;
+    object-fit: cover;
+    background-size: cover;
+    position: relative;
+   
+}
+ .home_container form{
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+}
+.home_container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    width: 100%;
+    place-items:center ;
+
+}
+.body-text{
+    color: white
+}

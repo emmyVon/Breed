@@ -1,0 +1,27 @@
+.faq_item{
+    background-color: blueviolet;
+    cursor:pointer;
+
+}
+
+.faq_item div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.faq_icon{
+    font-size: 1.5rem;
+    background: transparent;
+    color: white;
+}
+
+/* products */
+

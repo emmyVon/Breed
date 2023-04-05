@@ -1,0 +1,67 @@
+.About_us{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.Aboutus_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 2rem;
+    
+
+}
+
+.right_img>img{
+    width:50%;
+    padding-right: 1.5rem
+}
+
+
+.About_us>h1{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.cauSlider{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+}
+
+.slides{
+    width: 10rem;
+    background-color: black;
+    display: block;
+
+}
+
+.sliderImage{
+    height: 20rem;
+    width: 30rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    user-select: none;
+}
+.arroleft{
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top:50%;
+    left: 3px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.arroright{
+        font-size: 30px;
+        font-weight: 600;
+        position: absolute;
+        top: 50%;
+        right: 3px;
+        cursor: pointer;
+        z-index: 12;
+}
