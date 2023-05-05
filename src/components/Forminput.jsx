@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import Dashboard from "../pages/dashboard/Dashboard";
 
 const Forminput = () => {
   const formik = useFormik({
@@ -12,7 +13,11 @@ const Forminput = () => {
     },
     validationSchema: yup.object().shape({
       name: yup.string().trim().required("Name is required"),
-      email: yup.string().trim().email("Must be a valid email").required("Email is required"),
+      email: yup
+        .string()
+        .trim()
+        .email("Must be a valid email")
+        .required("Email is required"),
       password: yup
         .string()
         .min(6, "Must be 6 characters or more")
@@ -23,8 +28,12 @@ const Forminput = () => {
         .oneOf([yup.ref("password"), null], "password missmatch")
         .required(),
     }),
-    onSubmit: (values) => {
-      console.log("Submitted");
+    onSubmit: (values, { setSubmitting }) => {
+      setTimeout(() => {
+        setSubmitting(false);
+        <Dashboard values={values} />;
+        console.log("Submitted");
+      }, 1000);
     },
   });
   console.log(formik.values);
@@ -43,7 +52,9 @@ const Forminput = () => {
           required
         />
         {formik.touched.name && formik.errors.name ? (
-          <p style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}>
+          <p
+            style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}
+          >
             {formik.errors.name}
           </p>
         ) : null}
@@ -60,7 +71,9 @@ const Forminput = () => {
           required
         />
         {formik.touched.email && formik.errors.email ? (
-          <p style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}>
+          <p
+            style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}
+          >
             {formik.errors.email}
           </p>
         ) : null}
@@ -77,7 +90,9 @@ const Forminput = () => {
           required
         />
         {formik.touched.password && formik.errors.password ? (
-          <p style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}>
+          <p
+            style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}
+          >
             {formik.errors.password}
           </p>
         ) : null}
@@ -94,7 +109,9 @@ const Forminput = () => {
           required
         />
         {formik.touched.confirmpassword && formik.errors.confirmpassword ? (
-          <p style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}>
+          <p
+            style={{ color: "red", fontSize: ".875rem", marginBottom: "1rem" }}
+          >
             {formik.errors.confirmpassword}
           </p>
         ) : null}
@@ -103,10 +120,17 @@ const Forminput = () => {
         <label htmlFor="DOB">Date of Birth</label>
         <input type="date" name="DOB" />
       </div>
-      <button type="submit" className="btn" disabled={!formik.isValid}>
+      <button
+        type="submit"
+        className={
+          !formik.isValid || formik.isSubmitting ? "btn btn-disable" : "btn"
+        }
+        disabled={!formik.isValid}
+      >
         {" "}
         Submit
       </button>
+      {/* {formik.isValid && !formik.isSubmitting && <Dashboard />} */}
     </form>
   );
 };

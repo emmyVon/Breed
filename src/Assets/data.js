@@ -9,12 +9,13 @@ export const persona = [
         id: 1,
         image: client1,
         Name: 'Charles',
-        Age: 59
+        Age: 59,
+    
     },
 
     {
         id: 2,
-         image: client2,
+        image: client2,
         Name: 'john',
         Age: 23
     },
@@ -48,7 +49,7 @@ export const Ani = [
     },
     {
         Name: 'Tirex',
-        breed: 'german sherpard',
+        breed: 'Affenpinscher',
         sex: 'male',
         age: 2
     },

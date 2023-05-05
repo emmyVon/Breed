@@ -9,11 +9,6 @@
     position: relative;
    
 }
- .home_container form{
-    position: absolute;
-    right: 1.5rem;
-    top: 0.5rem;
-}
 .home_container{
     display:grid;
     grid-template-columns: repeat(2,1fr);
@@ -24,4 +19,32 @@
 }
 .body-text{
     color: white
+}
+.Top-dog-container{
+    display: flex;
+    gap: 2rem;
+}
+.Top-dog{
+    background-color: white;
+    height: 20rem;
+    width: 20rem;
+    
+}
+.Top-dog img{
+    height: 8rem;
+    object-fit: contain;
+
+}
+.Top-dog-text{
+    padding: 1rem;
+}
+.Top-dog-text>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 5rem;
+    color: white;
 }

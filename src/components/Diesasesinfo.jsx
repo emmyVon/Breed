@@ -2,7 +2,7 @@ import React from 'react'
 
 const Diesasesinfo = () => {
   return (
-    <div>Diesasesinfo</div>
+    <div> common Diesasesinfo</div>
   )
 }
 

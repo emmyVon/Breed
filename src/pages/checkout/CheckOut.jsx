@@ -1,5 +1,5 @@
 import React from 'react'
-import Forminput from '../../components/Forminput'
+import Forminput from '../../components/RegisterForm'
 
 
 const Checkout = () => {

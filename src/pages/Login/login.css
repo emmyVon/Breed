@@ -22,3 +22,6 @@ input{
     align-self: center;
     color: white;
 }
+.btn-disable{
+    background-color: grey;
+}

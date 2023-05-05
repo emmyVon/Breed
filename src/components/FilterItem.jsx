@@ -21,13 +21,13 @@ const FilterItem = () => {
 
   return (
     <section className="container product">
-            <div className="button_container">
+            {/* <div className="button_container">
                 {
                 Categories.map((btn,index)=> {
                     return <button key ={index} type='button' className ='btn'onClick={()=>FilterMenu(btn)}>{btn}</button>
                 })
                 }
-            </div>
+            </div> */}
             <div className=' dog_container'>
             {
                 menuItems.map((dog)=>{ 

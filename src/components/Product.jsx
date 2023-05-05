@@ -24,6 +24,7 @@ const Product = (props) => {
                     <h2>{props.age}</h2>
                     <p>{props.color}</p>
                 </div>
+                <button className='btn'>Add to Cart</button>
             </div>
         
            

@@ -14,12 +14,13 @@ const About = () => {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda voluptatibus, neque quas culpa natus numquam nesciunt repudiandae ipsa, sapiente facilis tenetur ipsam sequi iure et quae praesentium magnam. Saepe?</p>
             <button>Read more</button>
           </div>
-          <div className="right_img">
+           <Slider />
+          {/* <div className="right_img">
             <img src={Image1} alt="logo" />
             <img src={Image2} alt="logo1" />
-          </div>     
+          </div>      */}
       </div>
-      <Slider />
+     
     </section>
 
     

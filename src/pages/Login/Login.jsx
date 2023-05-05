@@ -1,11 +1,13 @@
 import React from 'react'
-import Forminput from '../../components/Forminput'
+import Forminput from '../../components/RegisterForm'
 import './login.css'
+import { Outlet } from 'react-router-dom'
 
 const Login = () => {
   return (
     <div className='login-form'>
-        <Forminput />
+      <h1>Welcome to Breedex, the House of Hounds</h1>
+        <Outlet />
     </div>
   )
 }
